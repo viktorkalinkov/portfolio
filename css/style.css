@@ -1,0 +1,176 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(195, 100%, 7%);
+}
+
+.project {
+    position: relative;
+    width: 80%;
+    display: table;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    border-radius: 30px;
+    background-color: hsl(196, 100%, 11%);
+    box-shadow: rgba(153, 46, 240, 0.4) -5px 5px, rgba(153, 46, 240, 0.3) -10px 10px, rgba(153, 46, 240, 0.2) -15px 15px, rgba(153, 46, 240, 0.4) 0px 5px, rgba(153, 46, 240, 0.3) 0px 10px, rgba(153, 46, 240, 0.2) 0px 15px, rgba(153, 46, 240, 0.1) 0px 20px, rgba(153, 46, 240, 0.05) 0px 25px, rgba(153, 46, 240, 0.4) 5px 5px, rgba(153, 46, 240, 0.3) 10px 10px, rgba(153, 46, 240, 0.2) 15px 15px, rgba(153, 46, 240, 0.1) 20px 20px, rgba(153, 46, 240, 0.05) 25px 25px;
+}
+
+.development {
+    position: relative;
+    width: 80%;
+    display: table;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    border-radius: 30px;
+    background-color: #1a3e5e;
+    box-shadow: rgba(240, 46, 46, 0.4) -5px 5px, rgba(240, 46, 46, 0.3) -10px 10px, rgba(240, 46, 46, 0.2) -15px 15px, rgba(240, 46, 46, 0.4) 0px 5px, rgba(240, 46, 46, 0.3) 0px 10px, rgba(240, 46, 46, 0.2) 0px 15px, rgba(240, 46, 46, 0.1) 0px 20px, rgba(240, 46, 46, 0.05) 0px 25px, rgba(240, 46, 46, 0.4) 5px 5px, rgba(240, 46, 46, 0.3) 10px 10px, rgba(240, 46, 46, 0.2) 15px 15px, rgba(240, 46, 46, 0.1) 20px 20px, rgba(240, 46, 46, 0.05) 25px 25px;
+}
+
+.my_work {
+    position: relative;
+    width: 80%;
+    display: table;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    border-radius: 30px;
+    background-color: #1a3e5e;
+    box-shadow: rgba(46, 75, 240, 0.4) -5px 5px, rgba(46, 75, 240, 0.3) -10px 10px, rgba(46, 75, 240, 0.2) -15px 15px, rgba(46, 75, 240, 0.4) 0px 5px, rgba(46, 75, 240, 0.3) 0px 10px, rgba(46, 75, 240, 0.2) 0px 15px, rgba(46, 75, 240, 0.1) 0px 20px, rgba(46, 75, 240, 0.05) 0px 25px, rgba(46, 75, 240, 0.4) 5px 5px, rgba(46, 75, 240, 0.3) 10px 10px, rgba(46, 75, 240, 0.2) 15px 15px, rgba(46, 75, 240, 0.1) 20px 20px, rgba(46, 75, 240, 0.05) 25px 25px;
+
+}
+
+.navbar {
+    width: 90%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.collapse {
+    text-align: center;
+}
+
+.main {
+    background: url(../img/bg.jpg) center/cover no-repeat fixed;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.services {
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+}
+
+.works {
+    text-align: center;
+    color: white;
+    align-self: center;
+    align-content: center;
+}
+
+.text-muted {
+    font-size: 30px;
+}
+
+.intro {
+    color: white;
+}
+
+.intro h2 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+ul {
+    margin: 0px auto 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 600px;
+    text-align: center;
+}
+
+li {
+    display: table-cell;
+    position: relative;
+    padding: 15px 0;
+}
+
+a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.card {
+    background-color: transparent;
+    border: none;
+    margin: 20px;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
+
+.card-img-top {
+    border-radius: 30px;
+    width: 300px;
+}
+.card-title {
+    margin-bottom: 10px;
+}
+
+.titles{
+    margin-bottom: 50px;
+}
+
+.intro_more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 48px auto 0;
+    padding: 20px;
+    width: 428px;
+    height: 78px;
+    font-size: 28px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #bd400b;
+    background: url(../img/btn.png) center/cover no-repeat;
+    cursor: pointer;
+}
+
+@media screen and (max-height: 300px) {
+    ul {
+        margin-top: 40px;
+    }
+}
