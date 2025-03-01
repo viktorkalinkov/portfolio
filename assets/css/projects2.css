@@ -1,0 +1,1251 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat-Black.eot");
+    src: local("☺"), url("fonts/Montserrat-Black.woff") format("woff"), url("fonts/Montserrat-Black.ttf") format("truetype"), url("fonts/Montserrat-Black.svg") format("svg");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat-Bold.eot");
+    src: local("☺"), url("fonts/Montserrat-Bold.woff") format("woff"), url("fonts/Montserrat-Bold.ttf") format("truetype"), url("fonts/Montserrat-Bold.svg") format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat-Regular.eot");
+    src: local("☺"), url("fonts/Montserrat-Regular.woff") format("woff"), url("fonts/Montserrat-Regular.ttf") format("truetype"), url("fonts/Montserrat-Regular.svg") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fonts/Montserrat-Light.eot");
+    src: local("☺"), url("fonts/Montserrat-Light.woff") format("woff"), url("fonts/Montserrat-Light.ttf") format("truetype"), url("fonts/Montserrat-Light.svg") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+
+    --color1: #A600AC;
+    --color2: #8E0093;
+    --color3: #76007A;
+    --color4: #5E0062;
+    --color5: #470049;
+    --color6: #2F0031;
+    --color7: #170018;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #5E0062 #170018;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #170018;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #5E0062;
+    border-radius: 20px;
+    border: 3px solid #170018;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    height: 100%;
+    background-color: #0c0c0c;
+}
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+.stars,
+.twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: #000 url(../img/stars.png) repeat top center;
+    z-index: -10;
+}
+
+.twinkling {
+    background: transparent url(../img/twinkling.png) repeat top center;
+    z-index: -10;
+    animation: move-twink-back 200s linear infinite;
+}
+
+/*////////////////////////////////////// Description //////////////////////////////////////*/
+
+#description {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    top: 0%;
+    left: -20%;
+    transform: translate(0%, -20%);
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 35px -35px 10px -8px rgba(118, 0, 122, 0.38);
+    -moz-box-shadow: 35px -35px 10px -8px rgba(118, 0, 122, 0.38);
+    box-shadow: 35px -35px 10px -8px rgba(118, 0, 122, 0.38);
+}
+
+.descriptionClass {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    top: 0%;
+    left: -20%;
+    transform: translate(0%, -20%);
+    margin: 40px auto 0 auto;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 35px -35px 10px -8px rgba(118, 0, 122, 0.38);
+    -moz-box-shadow: 35px -35px 10px -8px rgba(118, 0, 122, 0.38);
+    box-shadow: 35px -35px 10px -8px rgba(118, 0, 122, 0.38);
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.7rem;
+}
+
+#description #container-inner:hover {}
+
+.descriptionClass #container-inner {
+    position: absolute;
+
+    transform: rotate(-45deg);
+    top: 20%;
+    left: 30%;
+    font-size: 30px;
+    letter-spacing: 2px;
+
+    background-color: rgba(0, 0, 0, 0.025rem);
+
+}
+
+.descriptionClass:hover #container-inner {
+    background-color: rgba(255, 255, 255, 0.12);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.2);
+    box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.2);
+    transition: 0.8s;
+}
+
+.descriptionClass:hover #short-description {
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-box-shadow: 10px 10px 160px 30px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 10px 10px 160px 30px rgba(255, 255, 255, 0.2);
+    box-shadow: 10px 10px 160px 30px rgba(255, 255, 255, 0.2);
+    transition: 0.8s;
+}
+
+.descriptionClass #short-description {
+    position: absolute;
+    transform: rotate(-45deg);
+    top: 20%;
+    left: 40%;
+    border-radius: 5px;
+    padding: 15px;
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.descriptionClass #container-inner-text {
+    display: none;
+}
+
+.descriptionClass #container-inner-text .introduction::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 268px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color3);
+    border-radius: 50%;
+}
+
+.descriptionClass #container-inner-text .introduction::after {
+    content: "";
+    position: absolute;
+    top: 255px;
+    left: 255px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color3);
+}
+
+.descriptionClass #container-inner-text .main_goal::before {
+    content: "";
+    position: absolute;
+    top: 300px;
+    left: 668px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color3);
+    border-radius: 50%;
+}
+
+.descriptionClass #container-inner-text .main_goal::after {
+    content: "";
+    position: absolute;
+    top: 355px;
+    left: 555px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--color3);
+}
+
+
+/* Empty container that will replace the original container */
+.descriptionClass #empty-container {
+    width: 900px;
+    height: 900px;
+    margin: 40px auto 0 auto;
+}
+
+.descriptionClass #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/*////////////////////////////////////// Home Button //////////////////////////////////////*/
+
+.home{
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    transform: translate(50%, 50%);
+    text-align: center;
+}
+
+/*////////////////////////////////////// First Sprint //////////////////////////////////////*/
+#first_sprint {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 60%;
+    transform: translate(5%, 60%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+}
+
+.first_sprintClass {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 60%;
+    transform: translate(5%, 60%);
+    margin: 40px auto 0 auto;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    z-index: 3;
+
+}
+
+.first_sprintClassBlur {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 5%;
+    left: 60%;
+    transform: translate(5%, 60%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    opacity: 0;
+    z-index: 2;
+}
+
+#first_sprint:hover {
+    stroke: 1;
+    transform: rotate(-45deg);
+    transition: 1s;
+}
+
+#first_sprint:hover~.first_sprintClassBlur {
+    opacity: 0.5;
+    filter: blur(20px);
+    animation: rotate-animation 8s infinite linear;
+}
+
+
+/* #first_sprint:hover ~ #second_sprint {
+    width: 180px;
+    height: 180px;
+    left: 51%;
+}
+
+
+#first_sprint:hover ~ #third_sprint {
+    width: 180px;
+    height: 180px;
+    left: 75%;
+} */
+
+.first_sprintClass:hover #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.8s;
+    background-color: rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+}
+
+.first_sprintClass #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+}
+
+.first_sprintClass #container-inner-text {
+    display: none;
+}
+
+/* Empty container that will replace the original container */
+.first_sprintClass #empty-container {
+    width: 900px;
+    height: 900px;
+    margin: 40px auto 0 auto;
+}
+
+.first_sprintClass #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/*////////////////////////////////////// Second Sprint //////////////////////////////////////*/
+#second_sprint {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 29.5%;
+    left: 48%;
+    transform: translate(29.5%, 48%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+}
+
+.second_sprintClass {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 29.5%;
+    left: 48%;
+    transform: translate(29.5%, 48%);
+    margin: 40px auto 0 auto;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    z-index: 3;
+}
+
+.second_sprintClassBlur {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 29.5%;
+    left: 48%;
+    transform: translate(29.5%, 48%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    opacity: 0;
+    z-index: 2;
+}
+
+#second_sprint:hover {
+    transform: rotate(-45deg);
+    transition: 1s;
+}
+
+#second_sprint:hover~.second_sprintClassBlur {
+    opacity: 0.5;
+    filter: blur(20px);
+    animation: rotate-animation 8s infinite linear;
+}
+
+
+.second_sprintClass:hover #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.8s;
+    background-color: rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+}
+
+.second_sprintClass #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+}
+
+.second_sprintClass #container-inner-text {
+    display: none;
+}
+
+/* Empty container that will replace the original container */
+.second_sprintClass #empty-container {
+    width: 900px;
+    height: 900px;
+    margin: 40px auto 0 auto;
+}
+
+.second_sprintClass #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/*////////////////////////////////////// Third Sprint //////////////////////////////////////*/
+#third_sprint {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 29.5%;
+    left: 72%;
+    transform: translate(29.5%, 72%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+}
+
+.third_sprintClass {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 29.58%;
+    left: 72%;
+    transform: translate(29.5%, 72%);
+    margin: 40px auto 0 auto;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    z-index: 3;
+}
+
+.third_sprintClassBlur {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 29.58%;
+    left: 72%;
+    transform: translate(29.5%, 72%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    opacity: 0;
+    z-index: 2;
+}
+
+#third_sprint:hover {
+
+    stroke: 1;
+    transform: rotate(-45deg);
+    transition: 1s;
+}
+
+#third_sprint:hover~.third_sprintClassBlur {
+    opacity: 0.5;
+    filter: blur(20px);
+    animation: rotate-animation 8s infinite linear;
+}
+
+
+.third_sprintClass:hover #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.8s;
+    background-color: rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+}
+
+.third_sprintClass #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+}
+
+.third_sprintClass #container-inner-text {
+    display: none;
+}
+
+/* Empty container that will replace the original container */
+.third_sprintClass #empty-container {
+    width: 900px;
+    height: 900px;
+    margin: 40px auto 0 auto;
+}
+
+.third_sprintClass #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/*////////////////////////////////////// Fourth Sprint //////////////////////////////////////*/
+#fourth_sprint {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 54%;
+    left: 60%;
+    transform: translate(54%, 60%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+}
+
+.fourth_sprintClass {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 54%;
+    left: 60%;
+    transform: translate(54%, 60%);
+    margin: 40px auto 0 auto;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    z-index: 3;
+}
+
+.fourth_sprintClassBlur {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 54%;
+    left: 60%;
+    transform: translate(54%, 60%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    opacity: 0;
+    z-index: 2;
+}
+
+#fourth_sprint:hover {
+    stroke: 1;
+    transform: rotate(-45deg);
+    transition: 1s;
+}
+
+#fourth_sprint:hover~.fourth_sprintClassBlur {
+    opacity: 0.5;
+    filter: blur(20px);
+    animation: rotate-animation 8s infinite linear;
+}
+
+.fourth_sprintClass:hover #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.8s;
+    background-color: rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+}
+
+.fourth_sprintClass #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+}
+
+.fourth_sprintClass #container-inner-text {
+    display: none;
+}
+
+/* Empty container that will replace the original container */
+.fourth_sprintClass #empty-container {
+    width: 900px;
+    height: 900px;
+    margin: 40px auto 0 auto;
+}
+
+.fourth_sprintClass #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/*////////////////////////////////////// Fifth Sprint //////////////////////////////////////*/
+#fifth_sprint {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: 55%;
+    left: 80%;
+    transform: translate(55%, 80%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+}
+
+.fifth_sprintClass {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: 55%;
+    left: 80%;
+    transform: translate(55%, 80%);
+    margin: 40px auto 0 auto;
+    background-color: #323232;
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    z-index: 3;
+}
+
+.fifth_sprintClassBlur {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: 55%;
+    left: 80%;
+    transform: translate(55%, 80%);
+    margin: 40px auto 0 auto;
+    background-color: var(--color4);
+    color: white;
+    text-align: center;
+    transform: rotate(45deg);
+    transition: 1s;
+    -webkit-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    -moz-box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    box-shadow: 0px 0px 33px 20px rgba(94, 0, 98, 0.5);
+    transition: all 0.6s ease;
+    text-shadow: 0px 0px 0px #000000, 0px 1px 0px #000000, 0px 2px 0px #000000, 0px 3px 0px #000000, 0px 4px 0px #000000, 0px 5px 0px #000000;
+    line-height: 1.5rem;
+    opacity: 0;
+    z-index: 2;
+}
+
+#fifth_sprint:hover {
+    stroke: 1;
+    transition: 1s;
+}
+
+#fifth_sprint:hover~.fifth_sprintClassBlur {
+    opacity: 0.5;
+    filter: blur(20px);
+    animation: rotate-animation 8s infinite linear;
+}
+
+.fifth_sprintClass:hover #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transition: 0.8s;
+    background-color: rgba(255, 255, 255, 0.17);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(255, 255, 255, 0.3);
+}
+
+.fifth_sprintClass #container-inner {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 30px;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 160px 60px rgba(0, 0, 0, 0.3);
+}
+
+.fifth_sprintClass #container-inner-text {
+    display: none;
+}
+
+/* Empty container that will replace the original container */
+.fifth_sprintClass #empty-container {
+    width: 900px;
+    height: 900px;
+    margin: 40px auto 0 auto;
+}
+
+.fifth_sprintClass #close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+/*////////////////////////////////////// Animations //////////////////////////////////////*/
+
+.in-animation {
+    animation: inlightbox 0.8s forwards;
+    position: fixed !important;
+    margin: 0 !important;
+    transform: rotate(0deg);
+
+}
+
+.out-animation {
+    animation: outlightbox 0.5s forwards;
+}
+
+.no-animation {
+    overflow: hidden;
+}
+
+@keyframes inlightbox {
+    50% {
+        width: 100%;
+        left: 0;
+        height: 200px;
+    }
+
+    100% {
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes rotate-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*////////////////////////////////////// Columns //////////////////////////////////////*/
+
+.columns-introduction {
+    column-count: 3;
+    column-gap: 100px;
+    column-rule: 3px solid #A225FF;
+}
+
+/*////////////////////////////////////// Test Lines //////////////////////////////////////*/
+
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 90vw;
+    opacity: 0.5;
+}
+
+.line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.line::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+    animation: drop 7s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.line:nth-child(1) {
+    margin-left: -25%;
+}
+
+.line:nth-child(1)::after {
+    animation-delay: 2s;
+}
+
+.line:nth-child(3) {
+    margin-left: 25%;
+}
+
+.line:nth-child(3)::after {
+    animation-delay: 2.5s;
+}
+
+.line:nth-child(4) {
+    margin-left: -45%;
+}
+
+.line:nth-child(4)::after {
+    animation-delay: 2.5s;
+}
+
+.line:nth-child(5) {
+    margin-left: 45%;
+}
+
+.line:nth-child(5)::after {
+    animation-delay: 3s;
+}
+
+@keyframes drop {
+    0% {
+        top: -50%;
+    }
+
+    100% {
+        top: 110%;
+    }
+}
+
+/* Test */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+.modal-content {
+    background-color: #2e2e2e;
+    margin: 5% auto;
+    margin-top: 0;
+    border: 1px solid #888;
+    width: 80%;
+    height: 100%;
+}
+
+.modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* CSS */
+.pdfButton {
+    appearance: button;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0, #000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 5px 10px 0;
+    overflow: visible;
+    padding: 12px 40px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.pdfButton:focus {
+    text-decoration: none;
+}
+
+.pdfButton:hover {
+    text-decoration: none;
+}
+
+.pdfButton:active {
+    box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+    outline: 0;
+}
+
+.pdfButton:not([disabled]):active {
+    box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .pdfButton {
+        padding: 12px 50px;
+    }
+}
+
+/* Images */
+
+#persona,
+#brainstorming,
+#flowchart {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#persona:hover,
+#brainstorming:hover,
+#flowchart:hover {
+    opacity: 0.7;
+}
+
+/* The Image Modal (background) */
+.image-modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    padding-top: 50px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+    z-index: 100;
+}
+
+/* Modal Content (image) */
+.image-modal-content {
+    margin: auto;
+    display: block;
+    width: 50%;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.image-modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.image-out {
+    animation-name: zoom-out;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(1)
+    }
+
+    to {
+        -webkit-transform: scale(2)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.4)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes zoom-out {
+    from {
+        transform: scale(1)
+    }
+
+    to {
+        transform: scale(0)
+    }
+}
+
+/* The Close Button */
+.image-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.image-close:hover,
+.image-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .image-modal-content {
+        width: 100%;
+    }
+}

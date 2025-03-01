@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>VIKKI Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 Portfolio">
+  <meta name="keywords" content="html, css, sass, jquery">
+  <meta name="author" content="Viktor Kalinkov">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://kit.fontawesome.com/ab0609896a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/cat.css">
+  <link rel="stylesheet" href="assets/css/cursor.css">
+</head>
+
+<body style="overflow: hidden;">
+
+  <!-- notification for small viewports and landscape oriented smartphones -->
+  <div class="device-notification">
+    <a class="device-notification--logo" href="index.html">
+      <div class="background-cat">
+        <div class="cat">
+          <div class="ear ear--left"></div>
+          <div class="ear ear--right"></div>
+          <div class="face">
+            <div class="eye eye--left">
+              <div class="eye-pupil"></div>
+            </div>
+            <div class="eye eye--right">
+              <div class="eye-pupil"></div>
+            </div>
+            <div class="muzzle"></div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="perspective effect-rotate-left">
+    <div class="container">
+      <div class="outer-nav--return"></div>
+      <div id="viewport" class="l-viewport">
+        <div class="l-wrapper">
+          <header class="header">
+            <a class="header--logo" href="index.html">
+              <div class="background-cat">
+                <div class="cat">
+                  <div class="ear ear--left"></div>
+                  <div class="ear ear--right"></div>
+                  <div class="face">
+                    <div class="eye eye--left">
+                      <div class="eye-pupil"></div>
+                    </div>
+                    <div class="eye eye--right">
+                      <div class="eye-pupil"></div>
+                    </div>
+                    <div class="muzzle"></div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <button class="header--cta cta">Contact Me</button>
+            <div class="header--nav-toggle">
+              <span></span>
+            </div>
+          </header>
+          <ul class="l-main-content main-content">
+            <!-- Home -->
+            <li class="l-section section section--is-active">
+              <div class="intro">
+                <div class="intro--banner">
+                  <img src="assets/img/innobeweeglab.png" alt="Welcome">
+                </div>
+                <div class="intro--options">
+                  <a>
+                    <h3>Day &amp; Night</h3>
+                    <p>I love driving my car around and also having fun time with my friends.</p>
+                  </a>
+                  <a>
+                    <h3>Indoors</h3>
+                    <p>I enjoy the company of my girlfriend and our cat.</p>
+                  </a>
+                  <a>
+                    <h3>Relaxing</h3>
+                    <p>I like to unwind with some video games and series.</p>
+                  </a>
+                  <a>
+                    <h3>Relaxing</h3>
+                    <p>I like to unwind with some video games and series.</p>
+                  </a>
+                </div>
+              </div>
+            </li>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+  <div id="blob"></div>
+  <div id="blur"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')
+  </script>
+  <script src="assets/js/functions-min.js"></script>
+  <script src="assets/js/cursor.js"></script>
+
+  <script>
+    function openLearningOutcomes() {
+      var modal = document.getElementById("LO");
+      modal.style.display = "block";
+
+      var span = document.getElementsByClassName("modal-closepdf")[0];
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+
+      window.addEventListener('click', function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
